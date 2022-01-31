@@ -9,11 +9,16 @@
 <title>JSTL Core Tag Example</title>  
 </head>  
 <body>  
-Hi
+Hi <br>
+		<%
+			String nm = request.getAttribute("label").toString();
+			out.println("from request.getAttribute : "+ nm);
+		%>
 		
+<br>		
 <br> 	<c:out value="${'Welcome'}"/>  	
 <br>	
-<br>	Hello ${label}						<!-- All these  ${variable }  ${'text'} are EL_tags  -->
+<br>	Hello ${label}						<!-- All these  ${variable }  ${'text'} are EL_tags requires JSTL jakarta library -->
 
 <br>	${stu1}
 <br>	${stu1.name}						<!-- Here whenever we want to use student obj , we should be make sure that we use BEANS ; and to make a bean just we need is getters and setters in this Student class POJO -->

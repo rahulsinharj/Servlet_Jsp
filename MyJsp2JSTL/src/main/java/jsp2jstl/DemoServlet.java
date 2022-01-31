@@ -29,11 +29,13 @@ public class DemoServlet extends HttpServlet {
 		List<Student> students = Arrays.asList(new Student(102,"Vikash"),new Student(103,"Ramu"),new Student(104,"Ramesh"));
 		req.setAttribute("students", students);
 		
-		RequestDispatcher rd = req.getRequestDispatcher("stuDisplay.jsp");
+		RequestDispatcher rd = req.getRequestDispatcher("stuDisplay.jsp");		// req me set Attributes ko leke RequestDispatcher control ko forward kar dega "stuDisplay.jsp" ko  
 		rd.forward(req, res);
 		
+		// or otherwise RD kisi @WebServlet("/servlet2"") wale url mapped servlet ko bhi request forward kar skta hai like -
 		
-		
+//			RequestDispatcher rd = req.getRequestDispatcher("servlet2");	
+//			rd.forward(req, res);
 	}
 
 }

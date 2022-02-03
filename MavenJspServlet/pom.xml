@@ -35,6 +35,8 @@
 	</dependencies>
 
 
+	<!-- below isko daalne ke baad Properties -> TargetRuntime me jaake select TomCat10 ; or else RightClick-> Build Path -> Add Library -> Server Runtime -> Tomcat    -->
+	<!-- After that just RightClick -> MAVEN -> Update Project				-->
 	<build>
 		<plugins>
 			<plugin>

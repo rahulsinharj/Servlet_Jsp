@@ -31,8 +31,8 @@
 	
 	
 	<servlet>
-		<servlet-name>MyServlet</servlet-name>
-		<servlet-class>com.myservlet.MyServlet</servlet-class>
+		<servlet-name>MyServlet_ContextConfig</servlet-name>
+		<servlet-class>com.myservlet.MyServlet_ContextConfig</servlet-class>
 		<init-param>
 			<param-name>name</param-name>
 			<param-value>SINHA</param-value>
@@ -40,7 +40,7 @@
 	</servlet>
 	
 	<servlet-mapping>
-		<servlet-name>MyServlet</servlet-name>
+		<servlet-name>MyServlet_ContextConfig</servlet-name>
 		<url-pattern>/home</url-pattern>
 	</servlet-mapping>
 	

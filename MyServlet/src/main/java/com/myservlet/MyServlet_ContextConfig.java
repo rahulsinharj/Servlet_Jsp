@@ -42,5 +42,14 @@ public class MyServlet_ContextConfig extends HttpServlet {
 		
 		out.println("ServletContext - context-param : " +nm +" ---- "+ph);
 				
+/*
+ * Also instead of using => ctx.getInitParameter("name"); through mapped <context-param><param-name><param-value> in web.xml
+ 	, We can also add values directly from ServletJava Class through ServletContext by using  => context.setAttribute("list",list);  
+ 	
+ * Refer this video -  https://youtu.be/-AH4yV2FGwM																	
+*/
+ 
+
+		
 	}
 }

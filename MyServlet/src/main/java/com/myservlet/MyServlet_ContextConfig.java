@@ -39,11 +39,16 @@ public class MyServlet_ContextConfig extends HttpServlet {
 		ServletContext ctx = getServletContext(); 		// We are getting this method from HttpServlet class
 		String nm = ctx.getInitParameter("name");
 		String ph = ctx.getInitParameter("phone");
-		
 		out.println("ServletContext - context-param : " +nm +" ---- "+ph);
+		
+		
+//		ctx.setInitParameter("myAddress", "Delhi");			// IllegalStateException: Initialization parameters cannot be set after the context has been initialized. Initialization only be done in "/MyServlet/src/main/webapp/WEB-INF/web.xml"
+//		String ad = ctx.getInitParameter("myAddress");
+//		out.println("ServletContext - SET-GET-param : " +ad);
 				
-/*
- * Also instead of using => ctx.getInitParameter("name"); through mapped <context-param><param-name><param-value> in web.xml
+		
+
+/* Also instead of using => ctx.getInitParameter("name"); through mapped <context-param><param-name><param-value> in web.xml
  	, We can also add values directly from ServletJava Class through ServletContext by using  => context.setAttribute("list",list);  
  	
  * Refer this video -  https://youtu.be/-AH4yV2FGwM																	

@@ -23,3 +23,9 @@ public class MyResource {
         return "Got it!";
     }
 }
+
+/*
+	JAX-RS stands for JAVA API for RESTful Web Services. 
+	JAX-RS is a JAVA based programming language API and specification to provide support for created RESTful Web Services. 
+
+*/

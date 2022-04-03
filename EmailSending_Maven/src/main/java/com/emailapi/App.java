@@ -58,7 +58,7 @@ public class App
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
 			
-				return new PasswordAuthentication(senderMail, "Info@1234");
+				return new PasswordAuthentication(senderMail, "*******");
 			}
 			
 		});  

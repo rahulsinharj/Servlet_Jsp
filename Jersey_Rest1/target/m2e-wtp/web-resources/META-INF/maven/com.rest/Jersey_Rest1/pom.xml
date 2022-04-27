@@ -15,15 +15,25 @@
 	</properties>
 
 	<build>
-		<finalName>Jersey_Rest1</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>3.3.1</version>
-				<inherited>true</inherited>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<verbose>true</verbose>
+					<source>16</source>
+					<target>16</target>
+					<showWarnings>true</showWarnings>
+				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>Jersey_Rest1</finalName>
 	</build>
 
 
@@ -51,12 +61,12 @@
 			<artifactId>jersey-hk2</artifactId>
 		</dependency>
 
-		
+
 		<!-- uncomment this to get JSON support -->
 		<dependency>
 			<groupId>org.glassfish.jersey.media</groupId>
 			<artifactId>jersey-media-json-binding</artifactId>
-		</dependency>	
+		</dependency>
 
 
 		<!-- uncomment below 3-dependencies for getting XML parsing support -->
@@ -74,7 +84,7 @@
 		<dependency>
 			<groupId>org.glassfish.jersey.media</groupId>
 			<artifactId>jersey-media-jaxb</artifactId>
-			</dependency>
+		</dependency>
 
 	</dependencies>
 

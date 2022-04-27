@@ -9,23 +9,31 @@
 	<name>Jersey_Rest1</name>
 
 	<properties>
-		<java.version>16</java.version>
 		<jersey.version>3.0.4</jersey.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<build>
-		<finalName>Jersey_Rest1</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>3.3.1</version>
-				<inherited>true</inherited>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<verbose>true</verbose>
+					<source>1.8</source>
+					<target>1.8</target>
+					<showWarnings>true</showWarnings>
+				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>MavenJerseyRest</finalName>
 	</build>
-
 
 	<dependencyManagement>
 		<dependencies>

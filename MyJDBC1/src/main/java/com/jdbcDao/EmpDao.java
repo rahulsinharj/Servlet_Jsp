@@ -32,7 +32,10 @@ public class EmpDao {
 	{
 		Emp s1 = new Emp(108, "Sneha Sinha", "snehaaa");
 		int resultCount = saveEmpUser(s1);
-		System.out.println(resultCount+" row/s affected !");
+		System.out.println(resultCount+" user created !");
+		
+		int removeEmpUserResult = removeEmpUser(108);
+		System.out.println(removeEmpUserResult+" user deleted !");
 		
 		ArrayList<Emp> allEmp = getAllEmp();
 		
@@ -42,17 +45,34 @@ public class EmpDao {
 	
 	}
 
-	private static int saveEmpUser(Emp s1) 
+	private static int saveEmpUser(Emp e1) 
 	{
 		int count = 0;
 		try {
 			String query = "INSERT INTO emplogin VALUES (?,?,?)";			
 			
 			PreparedStatement ps = con.prepareStatement(query);				//STEP 4 : Create the Statement 
-			ps.setInt(1, s1.getId());
-			ps.setString(2, s1.getUsername());
-			ps.setString(3, s1.getPassword());	
+			ps.setInt(1, e1.getId());
+			ps.setString(2, e1.getUsername());
+			ps.setString(3, e1.getPassword());	
 			count = ps.executeUpdate();										//STEP 5 : Execute the query
+		
+		} 
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return count;	
+	}
+	
+	private static int removeEmpUser(int eid) 
+	{
+		int count = 0;
+		try {
+			String query = "DELETE FROM emplogin WHERE id="+eid;			
+			
+			Statement ps = con.createStatement();				//STEP 4 : Create the Statement 
+			count = ps.executeUpdate(query);										//STEP 5 : Execute the query
 		
 		} 
 		catch (SQLException e) {

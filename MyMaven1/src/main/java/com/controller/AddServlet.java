@@ -40,6 +40,8 @@ public class AddServlet extends HttpServlet {
 //		Cookie cookie = new Cookie("k", k+"" );				// 2nd parameter of cookie obj demands only String value ; You can also use String.valueOf() in caes of primitive values.
 //		res.addCookie(cookie);								// res. means we are sending this response "cookie" obj to the client ; So here AddServlet will send this response to the client and then client will again send the request to the "sq" servlet with the cookie as well.. 
 //		res.sendRedirect("sq");
+	
+	
 	}
 
 }

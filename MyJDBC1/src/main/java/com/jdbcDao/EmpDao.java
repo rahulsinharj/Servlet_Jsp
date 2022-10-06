@@ -14,7 +14,7 @@ public class EmpDao {
 	static String dbUser = "root";
 	static String dbPass = "rahulrj";
 	
-	static Connection con = null ; 
+	static Connection con = null ; 	
 	
 	static
 	{
